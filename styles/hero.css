@@ -1,0 +1,5 @@
+.hero {
+  border-radius: 8px;
+  backdrop-filter: blur(25px);
+  background: var(--main-bg-color);
+}

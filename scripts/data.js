@@ -1,0 +1,47 @@
+export const dataCards = [
+  {
+    title: "Влажность",
+    icon: "./public/svg/humidity.svg",
+    mainInfo: "75 %",
+    desc: { text: "0%", extraText: "100%" },
+    barometer: true,
+    specialBarometer: false,
+  },
+  {
+    title: "Давление",
+    icon: "./public/svg/barometer.svg",
+    mainInfo: "761",
+    desc: { text: "Повышенное", extraText: "" },
+    barometer: true,
+    specialBarometer: true,
+  },
+  {
+    title: "Видимость",
+    icon: "./public/svg/eye.svg",
+    mainInfo: "28 км",
+    desc: { text: "Нормальная", extraText: "" },
+    barometer: true,
+    specialBarometer: false,
+  },
+  {
+    title: "Рассвет",
+    icon: "./public/svg/sunrise.svg",
+    mainInfo: "8:42",
+    desc: { text: "Прошло: 02:47", extraText: "" },
+    barometer: false,
+  },
+  {
+    title: "Закат",
+    icon: "./public/svg/sunset.svg",
+    mainInfo: "16:37",
+    desc: { text: "Осталось: 05:08", extraText: "" },
+    barometer: false,
+  },
+  {
+    title: "Сила ветра",
+    icon: "./public/svg/direction.svg",
+    mainInfo: "2 м/с",
+    desc: { text: "Северо-западный", extraText: "" },
+    barometer: false,
+  },
+];

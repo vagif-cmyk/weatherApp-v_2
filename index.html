@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="./public/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherApp</title>
+  <link rel="stylesheet" href="./styles/main.css">
+  <script type="module" src="./scripts/main.js"></script>
+</head>
+
+<body>
+  <main class="hero">
+    <header class="hero__header header">
+      <a class="logo"  href="#">
+        <img src="./public/svg/logo.svg" alt="логотип">
+      </a>
+      <div class="header__search">
+        <input class="header__input" type="text" placeholder="Поиск по городу">
+        <img class="header__input-icon" src="./public/svg/search.svg" alt="иконка поиска">
+      </div>
+    </header>
+    <section class="hero__content content">
+      <div class="content__left">
+        <div class="content__left-top">
+          <div class="content__left-city">Москва</div>
+          <div class="content__left-date">Суббота, 06 января</div>
+          <div class="content__left-time">11:29</div>
+        </div>
+        <div class="content__left-temp">-7°</div>
+        <div class="content__left-bottom">
+          <div class="content__left-desc"><img src="./public/png/clouds.png" class="content__left-icon">Облачно</div>
+          <div class="content__left-feels">Ощущается как -11°</div>
+        </div>
+      </div>
+      <ul class="content__right">
+        <li class="content__right-item" >
+        </li>
+        <li class="content__right-item"></li>
+        <li class="content__right-item"></li>
+        <li class="content__right-item"></li>
+        <li class="content__right-item"></li>
+        <li class="content__right-item"></li>
+      </ul>
+    </section>
+    <section class="slider"></section>
+    <section class="footer"></section>
+  </main>
+
+</body>
+
+</html>
