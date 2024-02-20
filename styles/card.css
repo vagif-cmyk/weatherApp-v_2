@@ -52,3 +52,35 @@
   border-radius: 50%;
   background-color: var(--barometer-ball-bg);
 }
+
+@media (max-width: 768px) {
+  .content__right-item-title {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .content__right-item-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .content__right-item-info {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .content__right-item-ball {
+    width: 6px;
+    height: 6px;
+  }
+
+  .content__right-item-barometer {
+    min-height: 6px;
+  }
+
+  .content__right-item-desc, .content__right-item-extra-desc {
+    text-align: center;
+    font-size: 10px;
+    line-height: 12px;
+  }
+}

@@ -1,4 +1,4 @@
-export const dataCards = [
+export const dataCard = [
   {
     title: "Влажность",
     icon: "./public/svg/humidity.svg",
@@ -45,3 +45,44 @@ export const dataCards = [
     barometer: false,
   },
 ];
+
+export const details = {
+  hourly: [
+    { time: "00:00", icon: "./public/png/clouds.png", temp: "-7°" },
+    { time: "03:00", icon: "./public/png/clouds.png", temp: "9°" },
+    { time: "06:00", icon: "./public/png/clouds.png", temp: "12°" },
+    { time: "09:00", icon: "./public/png/clouds.png", temp: "12°" },
+    { time: "12:00", icon: "./public/png/clouds.png", temp: "13°" },
+    { time: "12:00", icon: "./public/png/clouds.png", temp: "13°" },
+    { time: "12:00", icon: "./public/png/clouds.png", temp: "13°" },
+    { time: "12:00", icon: "./public/png/clouds.png", temp: "13°" },
+    { time: "12:00", icon: "./public/png/clouds.png", temp: "13°" },
+  ],
+  weekly: [
+    {
+      date: "Вс, 07 янв.",
+      icon: "./public/png/day-few-clouds.png",
+      temp: "от -17° до -11°",
+    },
+    {
+      date: "Пн, 08 янв.",
+      icon: "./public/png/day-few-clouds.png",
+      temp: "от -16° до -8°",
+    },
+    {
+      date: "Вт, 09 янв.",
+      icon: "./public/png/day-few-clouds.png",
+      temp: "от -8° до -2°",
+    },
+    {
+      date: "Вт, 09 янв.",
+      icon: "./public/png/day-few-clouds.png",
+      temp: "от -8° до -2°",
+    },
+    {
+      date: "Вт, 09 янв.",
+      icon: "./public/png/day-few-clouds.png",
+      temp: "от -8° до -2°",
+    },
+  ],
+};

@@ -1,9 +1,8 @@
-import { dataCards } from "./data.js";
+import { dataCard, details } from "./data.js";
 
 document.querySelectorAll(".content__right-item").forEach((item, index) => {
-  const data = dataCards[index];
+  const data = dataCard[index];
   const hasBarometer = data.barometer;
-  const hasSpecialBarometer = data.specialBarometer;
   const descClass = data.desc.extraText
     ? "content__right-item-extra-desc"
     : "content__right-item-desc";
@@ -26,6 +25,33 @@ document.querySelectorAll(".content__right-item").forEach((item, index) => {
     data.desc.extraText
   }</span></div>`;
 });
+
+document.querySelectorAll(".slider__tabs").forEach((item) => {
+  item.addEventListener("click", (e) => {
+    const tabs = document.querySelectorAll(".slider__active-tab");
+    tabs.forEach((item) => {
+      item.classList.remove("slider__active-tab");
+    });
+    e.currentTarget.classList.add("slider__active-tab");
+    setSliderCards(details[e.currentTarget.dataset.id])
+  });
+});
+
+const sliderList = document.querySelector(".slider__cards-list");
+setSliderCards(details.hourly);
+
+function setSliderCards(arr) {
+  let result = ``;
+  arr.forEach((item) => {
+    result +=
+      `  <div class="slider__card">
+           <div class="slider__card-date">${item.time? item.time: item.date}</div>
+           <img class="slider__card-img" src=${item.icon} alt="иконка">
+           <div class="slider__card-temp">${item.temp}</div>
+         </div>`;
+  });
+  sliderList.innerHTML = result;
+}
 
 document
   .querySelector(".header__input")

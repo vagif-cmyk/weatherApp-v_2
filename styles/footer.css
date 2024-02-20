@@ -1,3 +1,23 @@
 .footer {
-  height: 84px;
+  padding: var(--main-paddings);
+  ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer__title, .footer__link {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--text-color-white);
+}
+
+@media (max-width: 768px) {
+  .footer__title, .footer__link {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }
