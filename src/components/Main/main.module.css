@@ -1,0 +1,24 @@
+.main {
+  display: grid;
+  grid-template-columns: 1fr 506px;
+  gap: var(--gap);
+  align-items: center;
+  padding-top: 32px;
+  margin-bottom: 32px;
+}
+
+@media all and (max-width: 1023px) {
+  .main {
+    grid-template-columns: auto;
+    gap: 48px;
+    padding-top: 16px;
+    margin-bottom: 24px;
+  }
+}
+
+@media all and (max-width: 767px) {
+
+  .main {
+    gap: var(--gap-secondary);
+  }
+}
