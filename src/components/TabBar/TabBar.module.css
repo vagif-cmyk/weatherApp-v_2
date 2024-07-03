@@ -1,0 +1,16 @@
+.tabBar {
+  display: flex;
+  gap: 32px;
+}
+
+@media (max-width: 1023px) {
+  .tabBar {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tabBar {
+    gap: 16px;
+  }
+}

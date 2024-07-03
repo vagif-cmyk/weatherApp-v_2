@@ -1,0 +1,16 @@
+:root {
+  --progress-value: 5%;
+
+  --neutral-tone-100: rgba(245, 244, 244, 0.4);
+  --neutral-tone-200: rgba(218, 218, 218, 0.4);
+  --neutral-filled-100: #f5f4f4;
+  --neutral-filled-200: #dadada;
+  --neutral-filled-400: #a6a6a6;
+  --neutral-filled-600: #707070;
+  --neutral-filled-700: #545454;
+  --neutral-filled-800: #393939;
+  --neutral-filled-900: #202020;
+  --bg-layer: rgba(112, 112, 112, 0.1);
+  --linear-gradient: linear-gradient(90deg, #dadada, #8a8a8a, #dadada);
+  --radial-gradient: radial-gradient(circle at 90px, transparent 6px);
+}

@@ -1,0 +1,63 @@
+.tabBtn {
+  position: relative;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.tabBtn::before,
+.tabBtn::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 3px);
+  right: -1px;
+  left: -1px;
+  height: 2px;
+  border-radius: 1px;
+  background: currentColor;
+}
+
+.tabBtn::before {
+  opacity: 0;
+}
+
+.tabBtn:hover::before,
+.tabBtn:focus::before {
+  opacity: .5;
+}
+
+.tabBtn.active:hover::before,
+.tabBtn.active:focus::before {
+  opacity: 0;
+}
+
+.tabBtn::after {
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.tabBtn.active {
+  color: var(--neutral-filled-100);
+  pointer-events: none;
+}
+
+.tabBtn.active::after {
+  transform: none;
+}
+
+@media (max-width: 767px) {
+  .tabBtn {
+    font-size: 12px;
+    line-height: 1.333;
+  }
+
+  .tabBtn::before,
+  .tabBtn::after {
+    top: calc(100% + 1.5px);
+    right: -1px;
+    left: -0.5px;
+    height: 0.5px;
+    border-radius: 0.5px;
+  }
+}

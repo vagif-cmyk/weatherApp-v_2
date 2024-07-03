@@ -1,32 +1,140 @@
-.drop {
-    position: absolute;
-    top: 120%;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-radius: 8px;
-    padding: 4px 0 16px;
-    background: var(--background);
-    transition: all .3s ease;
-    pointer-events: visible;
+.dropdown {
+  padding: 16px 0;
+  color: var(--neutral-filled-900);
+  background-color: var(--neutral-filled-200);
+  border-radius: 10px;
+  position: absolute;
+  top: 58px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  line-height: 1.2;
+  opacity: 1;
+  transition: height 0.5s;
 }
 
-.hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
+.history {
+  position: relative;
 }
 
-.itemEmpty {
-    padding: 12px 16px;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 120%;
-    color: var(--black-text);
+.history ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
-@media all and (max-width: 700px) {
-    .drop {
-        padding: 12px 0;
-    }
+.loaderWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  text-align: left;
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--neutral-filled-900);
+  background-color: transparent;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--neutral-filled-100);
+}
+
+.deleteBtn {
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+}
+
+.deleteBtn:hover svg path {
+  stroke: var(--neutral-filled-900);
+}
+
+.deleteBtn:disabled {
+  cursor: not-allowed;
+}
+
+.deleteBtn:disabled svg path {
+  stroke: var(--neutral-filled-700);
+}
+
+.deleteIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.deleteIcon svg path {
+  transition: stroke 0.3s;
+}
+
+.titleAndBtnWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 12px;
+  padding-inline: 16px;
+}
+
+.title {
+  margin: 0;
+
+  font-weight: 700;
+}
+
+.text {
+  padding-inline: 16px;
+  color: var(--neutral-filled-700);
+  font-size: 20px;
+  line-height: 1.2;
+
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .dropdown {
+    padding-block: clamp(0.75rem, -0.5rem + 3.13vw, 1rem);
+    top: 42px;
+  }
+
+  .titleAndBtnWrapper {
+    padding-inline: clamp(0.75rem, -0.5rem + 3.13vw, 1rem);
+    margin-bottom: clamp(0.5rem, -0.75rem + 3.13vw, 0.75rem);
+  }
+
+  .title {
+    font-size: clamp(1rem, -1.5rem + 6.25vw, 1.5rem);
+    line-height: clamp(1.25rem, -2.5rem + 9.38vw, 2rem);
+  }
+
+  .btn {
+    padding: clamp(0.5rem, -0.75rem + 3.13vw, 0.75rem)
+      clamp(0.75rem, -0.5rem + 3.13vw, 1rem);
+    font-size: clamp(0.875rem, -1rem + 4.69vw, 1.25rem);
+    line-height: clamp(1rem, -1.5rem + 6.25vw, 1.5rem);
+  }
+
+  .text {
+    font-size: clamp(0.875rem, -1rem + 4.69vw, 1.25rem);
+    line-height: clamp(1rem, -1.5rem + 6.25vw, 1.5rem);
+    padding-inline: clamp(0.75rem, -0.5rem + 3.13vw, 1rem);
+  }
+
+  .deleteIcon {
+    width: clamp(1rem, -1.5rem + 6.25vw, 1.5rem);
+    height: clamp(1rem, -1.5rem + 6.25vw, 1.5rem);
+  }
 }

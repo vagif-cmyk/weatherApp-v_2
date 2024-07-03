@@ -1,24 +1,54 @@
 .main {
   display: grid;
-  grid-template-columns: 1fr 506px;
-  gap: var(--gap);
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 64px 16px;
+  padding: 32px;
+}
+
+.forecast {
+  grid-column: 2 span;
+}
+
+.forecastHeader {
+  display: flex;
   align-items: center;
-  padding-top: 32px;
+  gap: 32px;
   margin-bottom: 32px;
 }
 
-@media all and (max-width: 1023px) {
+.forecastNav {
+  margin-top: 2px;
+}
+
+@media (max-width: 1023px) {
   .main {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     gap: 48px;
-    padding-top: 16px;
+    padding: 24px;
+  }
+
+  .forecast {
+    grid-column: 1 span;
+  }
+
+  .forecastHeader {
+    gap: 24px;
     margin-bottom: 24px;
   }
 }
 
-@media all and (max-width: 767px) {
-
+@media (max-width: 767px) {
   .main {
-    gap: var(--gap-secondary);
+    gap: 32px;
+    padding: 16px;
+  }
+
+  .forecastHeader {
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .forecastNav {
+    margin-top: 1px;
   }
 }

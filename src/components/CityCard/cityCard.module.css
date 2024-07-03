@@ -1,133 +1,96 @@
-.hero {
+.citycard {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
-  padding: 8px 0;
+  padding: 8px;
+  font-size: 20px;
+  line-height: 1.2;
   text-align: center;
 }
 
-.title,
-.degree {
-  font-weight: 700;
+.city {
+  margin-bottom: 8px;
+  word-break: break-all;
 }
 
-.title {
-  font-size: 24px;
-  line-height: 133%;
-}
-
-.degree {
-  font-size: 112px;
-  line-height: 100%;
-}
-
-.weather,
-.feeling,
-.day,
-.time,
-.degree,
-.title,
-.degree {
-  color: var(--white-text);
-}
-
-.weather,
-.feeling,
-.day,
-.time {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 120%;
-}
-
-.day,
-.title,
-.weather {
+.date {
   margin-bottom: 8px;
 }
 
-.degree {
-  margin-top: auto;
-  margin-bottom: auto;
+.tempFact {
+  margin: 64px 0;
+  font-size: 112px;
+  line-height: 1;
+  font-weight: 700;
 }
 
-.weather {
+.condition {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-bottom: 8px;
 }
 
-.degreeCurrent {
-  display: inline-block;
-  transform: translateY(-8px);
-}
-
-.icon {
+.conditionImg {
   width: 24px;
   height: 24px;
 }
 
-
-@media all and (max-width: 1023px) {
-
-  .hero {
-    padding: 0;
-  }
-
-  .title {
-    margin-bottom: 0px;
-  }
-
-  .time {
-    margin-bottom: 16px;
-  }
-
-  .degreeCurrent {
-    transform: translateY(0);
-  }
-
-  .degree {
-    margin-bottom: 32px;
+@media (max-width: 1279px) {
+  .tempFact {
+    margin: 48px 0;
   }
 }
 
-@media all and (max-width: 767px) {
+@media (max-width: 1023px) {
+  .citycard {
+    padding: 0;
+  }
 
-  .title {
-    font-size: 16px;
-    line-height: 125%;
+  .city {
+    margin-bottom: 6px;
+  }
+
+  .date {
+    margin-bottom: 6px;
+  }
+
+  .tempFact {
+    margin: 24px 0;
+  }
+
+  .condition {
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 767px) {
+  .citycard {
+    font-size: 14px;
+    line-height: 1.143;
+  }
+
+  .city {
     margin-bottom: 4px;
   }
 
-  .day {
+  .date {
     margin-bottom: 4px;
   }
 
-  .degree {
+  .tempFact {
+    margin: 16px 0;
     font-size: 56px;
-    line-height: 100%;
   }
 
-  .time,
-  .degree {
-    margin-bottom: 14px;
+  .condition {
+    gap: 4px;
+    margin-bottom: 4px;
   }
 
-  .weather {
-    margin-bottom: 8px;
-  }
-
-  .icon {
+  .conditionImg {
     width: 16px;
     height: 16px;
-  }
-
-  .weather,
-  .feeling,
-  .day,
-  .time {
-    font-size: 14px;
-    line-height: 114%;
   }
 }

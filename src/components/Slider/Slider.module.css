@@ -1,0 +1,146 @@
+.slider {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 32px;
+}
+
+.navigationBtn {
+  height: 48px;
+  padding: 12px 16px;
+}
+
+.navigationBtn:hover {
+  background: var(--neutral-filled-200);
+}
+
+.navigationBtn:disabled {
+  opacity: 0.3;
+}
+
+.content {
+  position: relative;
+  height: 64px;
+  overflow: hidden;
+  mask: linear-gradient(90deg, #000 93%, transparent 100%);
+  -webkit-mask: linear-gradient(90deg, #000 93%, transparent 100%);
+}
+
+.wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.wrapper.active {
+  position: relative;
+  opacity: 1;
+}
+
+.item {
+  flex-shrink: 0;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  transform: scale(0.3);
+  transition: transform 0.3s ease-in-out, background 0.2s ease-in-out;
+}
+
+.wrapper.active .card {
+  transform: none;
+}
+
+.cardImg {
+  width: 32px;
+  height: 32px;
+}
+
+.cardTitle,
+.cardTemp {
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  color: var(--neutral-filled-900);
+}
+
+@media (max-width: 1023px) {
+  .slider {
+    gap: 24px;
+  }
+
+  .wrapper {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 885px) {
+  .content {
+    height: 136px;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider {
+    gap: 16px;
+  }
+
+  .navigationBtn {
+    height: 32px;
+    padding: 8px 12px;
+  }
+
+  .navigationBtn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .content {
+    height: 48px;
+  }
+
+  .wrapper {
+    gap: 8px;
+  }
+
+  .card {
+    flex-direction: row;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .cardTitle,
+  .cardTemp {
+    font-size: 12px;
+    line-height: 1.333;
+  }
+
+  .cardImg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .content {
+    height: 104px;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+}
